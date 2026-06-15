@@ -69,7 +69,7 @@ jobs:
           scoop install nsis
 
       - name: Build Installer
-        uses: joncloud/makensis-action@v4.1
+        uses: joncloud/makensis-action@v5.0
         with:
           script-file: "./scripts/install.nsi"
 
