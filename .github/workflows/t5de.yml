@@ -1,6 +1,8 @@
 name: T5DE
 
-on: push
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -49,7 +51,7 @@ jobs:
           echo "APP_VERSION=${{ env.APP_VERSION }}"
 
       - name: Setup Python 2.7
-        uses: LizardByte/setup-python-action@master
+        uses: LizardByte/actions/actions/setup_python@master
         with:
           python-version: '2.7'
       - run: pip install -r requirements.txt
